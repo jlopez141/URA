@@ -1,0 +1,16 @@
+pro.lammpstrj			! Lammps trajectory
+4						! Number of species in the system
+O Si Al Na				! Species in the system
+5.0						! Maximum radius for the radial distribution function
+400						! Number of bins for the histograms										! 200
+0						! ext: number of extra atoms cosidered apart from the first neighbors 	!2
+
+.true.					! compute_first_neighbors
+.true.					! plot_results	 
+.true.					! Compute_deviations
+
+.true.					! read_mat_neighbor :: N(ei,ej) = Number of neghbors of type e2 of the central atom ei
+0 3	3 0					! N(e1,e1) N(e1,e2) ... N(e1,en)
+5 0	0 0					! N(e2,e1) N(e2,e2) ... N(e2,en)
+5 0 0 0
+0 0 0 0
